@@ -21,7 +21,7 @@ public class MongoFactory {
     private MongoFactory() { }
  
     // Returns a mongo instance.
-    public static MongoClient getMongo() {
+    public MongoClient getMongo() {
     	MongoClientURI uri = new MongoClientURI(
    			 "mongodb+srv://userdbjava:LRFS3KN0ShSJej4E@cluster0.c7ixp.mongodb.net/urlShortener?retryWrites=true&w=majority"); 
          if (mongo == null) {
@@ -35,14 +35,14 @@ public class MongoFactory {
     }
  
     // Fetches the mongo database.
-    public static MongoDatabase getDataBase(String db_name) {  
+    public MongoDatabase getDataBase(String db_name) {  
     	if(mongo==null)
     		getMongo();
         return mongo.getDatabase(db_name);
     }
  
     // Fetches the collection from the mongo database.
-    public static MongoCollection<Document> getCollection(String db_name, String db_collection) {
+    public MongoCollection<Document> getCollection(String db_name, String db_collection) {
         return getDataBase(db_name).getCollection(db_collection);
     }
 }
