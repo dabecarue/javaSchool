@@ -9,4 +9,6 @@ use POST <requestBody> to create a new alias
 use GET /<alias> to redirect to the associated url
   Example  GET “http:localhost/AcZ4G0p” redirect to “https://espanol.yahoo.com/?p=us"
   
+  For connection to MongoDB issues: Some networks block access to MongoDB. Troubleshooting:https://docs.mongodb.com/manual/tutorial/configure-windows-netsh-firewall/
+  
   Note that this repo may not contain so many commits because my original computer had github access blocked so I had to upload by files, sorry for that.
